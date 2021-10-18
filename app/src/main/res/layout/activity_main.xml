@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:id="@+id/layoutHeader"
+       android:layout_width="match_parent"
+       android:layout_height="?actionBarSize"
+       android:background="@color/colorprimary"
+       android:gravity="center_vertical"
+       android:orientation="horizontal"
+       android:paddingStart="@dimen/_8sdp"
+       app:layout_constraintTop_toTopOf="parent">
+
+
+       <TextView
+           android:id="@+id/txtTitle"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="@dimen/_8sdp"
+           android:layout_weight="1"
+           android:fontFamily="@font/ubuntu_bold"
+           android:includeFontPadding="false"
+           android:textColor="@color/colortexticon"
+           android:textSize="@dimen/_15ssp"/>
+
+       <TextView
+           android:id="@+id/txtSignout"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:fontFamily="@font/ubuntu_bold"
+           android:gravity="center"
+           android:includeFontPadding="false"
+           android:text="Sign Out"
+           android:textColor="@color/colorbacground"
+           android:textSize="@dimen/_13ssp"
+           />
+
+
+
+
+
+   </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userRecycleview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@+id/myname"
+            app:layout_constraintTop_toBottomOf="@id/layoutHeader" />
+
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powered By Ranawat 🍁"
+            android:textSize="@dimen/_19sdp"
+            android:gravity="center"
+            android:textColor="@color/colorsecondrytext"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userRecycleview"
+             />
+
+
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/txtErrorMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="#33b5e5"
+        android:textSize="@dimen/_13ssp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layoutHeader"/>
+
+
+
+<ImageView
+    android:id="@+id/imgConference"
+    android:layout_width="@dimen/_45sdp"
+    android:layout_height="@dimen/_45sdp"
+    android:layout_marginEnd="@dimen/_25sdp"
+    android:layout_marginBottom="@dimen/_25sdp"
+    android:contentDescription="@string/app_name"
+    android:src="@drawable/ic_conference"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:tint="@color/colorprimary" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

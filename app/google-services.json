@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "365603265649",
+    "project_id": "videomeeting-9c9d9",
+    "storage_bucket": "videomeeting-9c9d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365603265649:android:577d2fa8aa928e02ed0fd0",
+        "android_client_info": {
+          "package_name": "com.RanaWat.VideoMeeting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365603265649-6ts0vdbkr2etnkabdc6vqekihina9jtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQSElsR8WkqhW8mqw2SlSdvsUbUMVFz3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365603265649-6ts0vdbkr2etnkabdc6vqekihina9jtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
